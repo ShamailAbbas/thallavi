@@ -11,13 +11,12 @@ const Upload = ({ Busy, checkbusy }) => {
     setName(e.target.value)
   }
 
-  const Upload = () => {
+  const Upload = async () => {
     const info = { name: name, file: file }
     const url = 'http://localhost:5000/Feeds/'
-    axios.post(url, info).then(() => {
-      console.log('uploaded ')
-      Busy()
-    })
+    await axios.post(url, info)
+    console.log('uploaded ')
+    Busy()
   }
   return (
     <>
