@@ -12,13 +12,13 @@ const Upload = ({ Busy, checkbusy }) => {
     setName(e.target.value)
   }
 
-  const Upload = async () => {
-    const info = { name: name, file: file }
-    // const url = 'http://localhost:5000/Feeds/'
-    await axios.post(url, info)
-    console.log('uploaded ')
+  const Upload = (post) => {
+    console.log('just before post request')
+    axios.post(url, post)
+    console.log('uploaded >>>>> ')
     Busy()
   }
+
   return (
     <>
       {checkbusy ? <Model /> : null}
@@ -39,7 +39,8 @@ const Upload = ({ Busy, checkbusy }) => {
           className='submitbtn'
           onClick={() => {
             Busy()
-            Upload()
+            const post = { name: name, file: file }
+            Upload(post)
           }}
         >
           Upload

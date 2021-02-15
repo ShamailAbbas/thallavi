@@ -1,18 +1,30 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 import '../css/model.css'
-const Model = () => {
+import { connect } from 'react-redux'
+const Model = ({ Busy }) => {
   return ReactDom.createPortal(
     <>
       <div className='modelbg'>
         <div className='model'>
-          i am a model
-          <button>close</button>
+          Please Wait....
+          <button
+            onClick={() => {
+              Busy()
+            }}
+          >
+            close
+          </button>
         </div>
       </div>
     </>,
     document.getElementById('portal')
   )
 }
+const mapDispatchtoProps = (dispatch) => {
+  return {
+    Busy: () => dispatch({ type: 'BUSY' }),
+  }
+}
 
-export default Model
+export default connect(null, mapDispatchtoProps)(Model)
