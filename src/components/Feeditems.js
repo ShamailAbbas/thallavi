@@ -4,7 +4,7 @@ import '../css/Feeditems.css'
 import { connect } from 'react-redux'
 import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined'
 import DeleteOutlineOutlinedIcon from '@material-ui/icons/DeleteOutlineOutlined'
-import url from './url'
+import url from './url.js'
 const Feeditems = ({ name, file, _id, like, dispatch }) => {
   const likefc = async (_id) => {
     // const url = 'http://localhost:5000/Feeds/'

@@ -3,7 +3,7 @@ import Feeditems from './Feeditems.js'
 import '../css/Feed.css'
 import { connect } from 'react-redux'
 import { CircularProgress } from '@material-ui/core'
-import url from './url'
+import url from './url.js'
 const Feeds = ({ Loading, Feeds, dispatch }) => {
   // const url = 'http://localhost:5000/Feeds/'
   const fetchdata = () => async (dispatch) => {
