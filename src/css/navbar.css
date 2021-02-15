@@ -1,0 +1,18 @@
+* {
+ margin: 0;
+ padding: 0;
+}
+
+.Nbcontainer {
+ height: 70px;
+ background-color: rgb(33, 143, 194);
+ display: flex;
+ align-items: center;
+ justify-content: flex-end;
+}
+
+.Nbcontainer>h2 {
+ color: white;
+ margin-right: 70px;
+ cursor: pointer;
+}

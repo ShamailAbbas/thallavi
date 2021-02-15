@@ -1,0 +1,20 @@
+.uploadcontainer{
+ display:flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+.forminput{
+width:400px;
+height:50px;
+margin-top: 200px;
+}
+.submitbtn{
+width:400px;
+height:50px;
+border: transparent;
+background-color: crimson;
+border-radius: 5px;
+margin-top: 20px;
+}
