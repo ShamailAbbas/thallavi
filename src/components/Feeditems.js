@@ -4,14 +4,15 @@ import '../css/Feeditems.css'
 import { connect } from 'react-redux'
 import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined'
 import DeleteOutlineOutlinedIcon from '@material-ui/icons/DeleteOutlineOutlined'
+import url from './url'
 const Feeditems = ({ name, file, _id, like, dispatch }) => {
   const likefc = async (_id) => {
-    const url = 'http://localhost:5000/Feeds/'
+    // const url = 'http://localhost:5000/Feeds/'
     await axios.patch(`${url}/${_id}/like`)
     dispatch({ type: 'LIKED', payload: _id })
   }
   const deletefc = async (_id) => {
-    const url = 'http://localhost:5000/Feeds/'
+    // const url = 'http://localhost:5000/Feeds/'
     await axios.delete(`${url}/${_id}`)
     console.log('deleted')
     dispatch({ type: 'DELETE', payload: _id })

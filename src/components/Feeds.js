@@ -3,9 +3,9 @@ import Feeditems from './Feeditems.js'
 import '../css/Feed.css'
 import { connect } from 'react-redux'
 import { CircularProgress } from '@material-ui/core'
-
+import url from './url'
 const Feeds = ({ Loading, Feeds, dispatch }) => {
-  const url = 'http://localhost:5000/Feeds/'
+  // const url = 'http://localhost:5000/Feeds/'
   const fetchdata = () => async (dispatch) => {
     const response = await fetch(url)
     const data = await response.json()
