@@ -4,6 +4,7 @@ import axios from 'axios'
 import FileBase from 'react-file-base64'
 import { connect } from 'react-redux'
 import Model from './Model'
+import url from './url'
 const Upload = ({ Busy, checkbusy }) => {
   const [name, setName] = useState('')
   const [file, setFile] = useState('')
@@ -13,7 +14,7 @@ const Upload = ({ Busy, checkbusy }) => {
 
   const Upload = async () => {
     const info = { name: name, file: file }
-    const url = 'http://localhost:5000/Feeds/'
+    // const url = 'http://localhost:5000/Feeds/'
     await axios.post(url, info)
     console.log('uploaded ')
     Busy()
