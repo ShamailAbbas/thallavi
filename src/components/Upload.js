@@ -8,15 +8,16 @@ import url from './url'
 const Upload = ({ Busy, checkbusy }) => {
   const [name, setName] = useState('')
   const [file, setFile] = useState('')
+  const post = { name: name, file: file }
   const handlechange = (e) => {
     setName(e.target.value)
   }
 
-  const Upload = (post) => {
-    console.log('just before post request')
-    axios.post(url, post)
-    console.log('uploaded >>>>> ')
-    Busy()
+  const Upload = async () => {
+    await Busy()
+    await axios.post(url, post)
+    await Busy()
+    return
   }
 
   return (
@@ -38,9 +39,7 @@ const Upload = ({ Busy, checkbusy }) => {
         <button
           className='submitbtn'
           onClick={() => {
-            Busy()
-            const post = { name: name, file: file }
-            Upload(post)
+            Upload()
           }}
         >
           Upload
