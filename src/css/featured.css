@@ -1,0 +1,28 @@
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  background-color: rgb(191, 178, 178);
+  font-family: Poppins;
+}
+.image {
+  width: 100%;
+}
+.toptag {
+  width: 5em;
+  height: 3em;
+  background-color: black;
+  color: aliceblue;
+  padding: 1em;
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 0em 0em 1em 0em;
+}
+.category {
+  color: black;
+}
+.link {
+  text-decoration: none;
+}

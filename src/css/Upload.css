@@ -1,20 +1,31 @@
-.uploadcontainer{
- display:flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
+.uploadcontainer {
+  display: grid;
+  place-items: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  top: 10em;
+  border: 2px solid goldenrod;
+  margin-top: 1em;
+  padding: 1em 2em;
+  /* border-radius: 1em; */
 }
 
-.forminput{
-width:400px;
-height:50px;
-margin-top: 200px;
+.forminput {
+  width: 400px;
+  height: 50px;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
 }
-.submitbtn{
-width:400px;
-height:50px;
-border: transparent;
-background-color: crimson;
-border-radius: 5px;
-margin-top: 20px;
+label {
+  font-size: large;
+}
+.submitbtn {
+  width: 400px;
+  height: 50px;
+  border: transparent;
+  background-color: goldenrod;
+  border-radius: 5px;
+  margin-top: 20px;
 }

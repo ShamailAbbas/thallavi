@@ -1,18 +1,115 @@
 * {
- margin: 0;
- padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.Nbcontainer {
- height: 70px;
- background-color: rgb(33, 143, 194);
- display: flex;
- align-items: center;
- justify-content: flex-end;
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 2em;
+  background-color: rgba(0, 0, 0, 0.652);
+  position: sticky;
+  top: 0;
+  z-index: 2000;
 }
+.left {
+  left: 20px;
+  justify-self: flex-start;
+  position: absolute;
+  color: white;
+  font-family: Poppins;
+  display: flex;
+  align-items: baseline;
+}
+.right {
+  justify-self: flex-end;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  color: white;
+  font-family: Poppins;
+}
+.hello {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.resort {
+  color: goldenrod;
+  margin-left: 0.3em;
+  /* margin-right: 2em; */
+}
+.left > h4 {
+  margin-left: 1em;
+  cursor: pointer;
+}
+.left > h1 {
+  font-size: 2.5em;
+  cursor: pointer;
+}
+.navlink {
+  text-decoration: none;
+  color: white;
+  font-family: Poppins;
+  margin-left: 1em;
+  cursor: pointer;
+}
+.navlink:hover {
+  color: goldenrod;
+}
+.menubtn {
+  display: none;
+  cursor: pointer;
+}
+/* mediaquery */
+@media only screen and (max-width: 930px) {
+  .left > h1 {
+    font-size: 2em;
+  }
+  .resort {
+    margin-right: 0em;
+  }
 
-.Nbcontainer>h2 {
- color: white;
- margin-right: 70px;
- cursor: pointer;
+  .menubtn {
+    display: unset;
+    position: fixed;
+    top: 1.5em;
+    right: 1em;
+    background-color: transparent;
+    border: transparent;
+    z-index: 1000;
+    color: white;
+    font-size: 1em;
+  }
+
+  .showmenu {
+    width: 66%;
+    transition-duration: 0.3s;
+  }
+  .hidemenu {
+    width: 0%;
+    transition-duration: 0.3s;
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    background: #333;
+
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    align-items: flex-start;
+    position: fixed;
+    z-index: 500;
+  }
+  .hello {
+    margin-left: 2em;
+    margin-top: 5em;
+  }
+  .navlink {
+    margin-left: 2em;
+    margin-top: 1em;
+  }
 }

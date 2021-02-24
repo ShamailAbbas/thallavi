@@ -1,0 +1,19 @@
+.formwrapper {
+  display: grid;
+}
+.formbox {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  border: 2px solid goldenrod;
+  padding: 2em;
+  width: 25em;
+  margin-top: 2em;
+}
+input {
+  padding: 1em;
+}
+label {
+  margin-top: 1em;
+}

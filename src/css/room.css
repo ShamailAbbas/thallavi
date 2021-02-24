@@ -1,0 +1,14 @@
+.menu {
+  display: flex;
+  margin-top: 1em;
+}
+.menu > h6 {
+  margin-left: 2em;
+  transition-duration: 0.2s;
+  padding: 0.3em 1em;
+}
+.menu > h6:hover {
+  background-color: goldenrod;
+  border-radius: 0.3em;
+  transition-duration: 0.2s;
+}

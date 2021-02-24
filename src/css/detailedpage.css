@@ -1,0 +1,47 @@
+.wrapper {
+  display: grid;
+  padding: 1em;
+}
+.hero {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  margin: 1em 2em;
+  gap: 3em;
+  font-family: Poppins;
+  color: black;
+}
+.leftsection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(165, 154, 154);
+}
+.leftsection > img {
+  width: 100%;
+}
+.rightsection {
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
+}
+.rightsection > h1 {
+  margin-bottom: 1em;
+}
+.booknow {
+  padding: 1em 5em;
+  color: black;
+  font-family: Poppins;
+  border-radius: 0.2em;
+  max-width: 30em;
+  justify-self: center;
+  background-color: goldenrod;
+  border: transparent;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 1em;
+}
