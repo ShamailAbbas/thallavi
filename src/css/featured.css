@@ -26,3 +26,9 @@
 .link {
   text-decoration: none;
 }
+/* mediaquery */
+@media only screen and (max-width: 550px) {
+  .image {
+    width: 80vw;
+  }
+}

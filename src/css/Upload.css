@@ -13,8 +13,8 @@
 }
 
 .forminput {
-  width: 400px;
-  height: 50px;
+  width: 25em;
+  height: 3em;
   margin-bottom: 0.5em;
   margin-top: 0.5em;
 }
@@ -22,10 +22,36 @@ label {
   font-size: large;
 }
 .submitbtn {
-  width: 400px;
-  height: 50px;
+  width: 25em;
+  height: 3em;
   border: transparent;
   background-color: goldenrod;
   border-radius: 5px;
   margin-top: 20px;
+}
+
+/* mediaquery */
+@media only screen and (max-width: 550px) {
+  .form {
+    width: 75%;
+    width: 20em;
+    padding: 1em;
+  }
+  .forminput {
+    width: 20em;
+    height: 2.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+  }
+  .submitbtn {
+    width: 20em;
+    height: 3em;
+    border: transparent;
+    background-color: goldenrod;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  .choosefile {
+    border: none;
+  }
 }

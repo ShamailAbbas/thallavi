@@ -19,10 +19,11 @@
   width: 100%;
   height: 100%;
   background-image: url(../images/coverimage.jpg);
+  background-repeat: repeat;
   position: absolute;
   top: 0;
   z-index: -1;
-  background-size: contain;
+  background-size: cover;
 }
 .circularprogress {
   display: grid;
@@ -93,5 +94,16 @@
   }
   .rooms {
     padding: 0.5rem 0.7rem;
+  }
+  .home::before {
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/coverimage.jpg);
+    background-repeat: repeat;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    background-size: cover;
   }
 }

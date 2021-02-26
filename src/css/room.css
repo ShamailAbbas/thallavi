@@ -12,3 +12,23 @@
   border-radius: 0.3em;
   transition-duration: 0.2s;
 }
+/* mediaquery */
+@media only screen and (max-width: 550px) {
+  .menu > h6 {
+    font-size: 0.7em;
+    padding: 0.2em 0em;
+  }
+  .title {
+    font-size: 1em;
+  }
+}
+/* mediaquery */
+@media only screen and (max-width: 400px) {
+  .menu > h6 {
+    font-size: 0.5em;
+    padding: 0.2em 0em;
+  }
+  .title {
+    font-size: 1em;
+  }
+}

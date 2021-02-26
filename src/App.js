@@ -15,30 +15,32 @@ import Admindashboard from './components/Admindashboard.js'
 function App() {
   return (
     <>
-      <Navbar />
-      <Switch>
-        <Route exact path='/' component={Landingpage} />
-        <Route exact path='/rooms' component={Rooms} />
-        <Route exact path='/detailedpage' component={Detailedpage} />
-        <Route exact path='/bookingpage' component={Bookingpage} />
-        <Route
-          exact
-          path='/mybookings'
-          component={localStorage.user ? Mybookings : Landingpage}
-        />
-        <Route
-          exact
-          path='/admindashboard'
-          component={
-            localStorage.userrole === 'Admin' ? Admindashboard : Landingpage
-          }
-        />
-        <Route exact path='/Signup' component={Signup} />
-        <Route exact path='/Login' component={Login} />
-        <Route exact path='/Upload' component={Upload} />
+      <div className='app'>
+        <Navbar />
+        <Switch>
+          <Route exact path='/' component={Landingpage} />
+          <Route exact path='/rooms' component={Rooms} />
+          <Route exact path='/detailedpage' component={Detailedpage} />
+          <Route exact path='/bookingpage' component={Bookingpage} />
+          <Route
+            exact
+            path='/mybookings'
+            component={localStorage.user ? Mybookings : Landingpage}
+          />
+          <Route
+            exact
+            path='/admindashboard'
+            component={
+              localStorage.userrole === 'Admin' ? Admindashboard : Landingpage
+            }
+          />
+          <Route exact path='/Signup' component={Signup} />
+          <Route exact path='/Login' component={Login} />
+          <Route exact path='/Upload' component={Upload} />
 
-        <Redirect to='/' />
-      </Switch>
+          <Redirect to='/' />
+        </Switch>
+      </div>
     </>
   )
 }

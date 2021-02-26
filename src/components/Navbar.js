@@ -29,35 +29,39 @@ const Navbar = ({ user, userrole }) => {
       <div className='right hidemenu' ref={menuref}>
         <div className='hello'>
           <p>Hello</p>
-          <p>{localStorage.user ? localStorage.user : 'Guest'}</p>
         </div>
-
-        <Link to={'/Upload'} className='navlink'>
-          <p>{userrole === 'Admin' ? 'Upload' : ''}</p>
-        </Link>
-
-        <Link to='/admindashboard' className='navlink'>
-          <p>{localStorage.userrole === 'Admin' ? 'AdminDashboard' : ''}</p>
-        </Link>
-        <Link to='/mybookings' className='navlink'>
-          <p>
-            {localStorage.userrole !== 'Admin' && localStorage.user
-              ? 'MyBookings'
-              : ''}
+        <div className='secondrow'>
+          <p className='username'>
+            {localStorage.user ? localStorage.user : 'Guest'}
           </p>
-        </Link>
-        <Link to={user ? '/' : '/Login'} className='navlink'>
-          <p
-            onClick={() => {
-              if (user) {
-                localStorage.clear()
-                window.location.reload()
-              } else return
-            }}
-          >
-            {user ? 'Log out' : 'Login'}
-          </p>
-        </Link>
+
+          <Link to={'/Upload'} className='navlink'>
+            <p>{userrole === 'Admin' ? 'Upload' : ''}</p>
+          </Link>
+
+          <Link to='/admindashboard' className='navlink'>
+            <p>{localStorage.userrole === 'Admin' ? 'AdminDashboard' : ''}</p>
+          </Link>
+          <Link to='/mybookings' className='navlink'>
+            <p>
+              {localStorage.userrole !== 'Admin' && localStorage.user
+                ? 'MyBookings'
+                : ''}
+            </p>
+          </Link>
+          <Link to={user ? '/' : '/Login'} className='navlink'>
+            <p
+              onClick={() => {
+                if (user) {
+                  localStorage.clear()
+                  window.location.reload()
+                } else return
+              }}
+            >
+              {user ? 'Log out' : 'Login'}
+            </p>
+          </Link>
+        </div>
       </div>
     </div>
   )

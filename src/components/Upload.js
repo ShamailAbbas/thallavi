@@ -91,6 +91,7 @@ const Upload = ({ Busy, checkbusy }) => {
             type='file'
             multiple={false}
             onDone={({ base64 }) => setFile(base64)}
+            className='choosefile'
           />
 
           <button

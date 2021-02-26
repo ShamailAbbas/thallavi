@@ -85,7 +85,7 @@ const Bookingpage = ({ image, price, category }) => {
             onChange={(e) => setcontact(e.target.value)}
           />
 
-          <input type='submit' value='BOOKNOw' className='booknow' />
+          <input type='submit' value='BOOKNOW' className='booknow' />
         </form>
       </div>
     )

@@ -1,8 +1,10 @@
 .wrapper {
   display: grid;
   padding: 1em;
+  box-sizing: border-box;
 }
 .hero {
+  box-sizing: border-box;
   display: grid;
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -44,4 +46,25 @@
   font-weight: bold;
   font-size: 1.2em;
   margin-top: 1em;
+}
+/* mediaquery */
+@media only screen and (max-width: 550px) {
+  .wrapper {
+    padding: 0;
+  }
+  .hero {
+    grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+    margin: 0em;
+    gap: 1em;
+    padding: 0.5em;
+    box-sizing: border-box;
+  }
+  .leftsection {
+    width: 85%;
+    box-sizing: border-box;
+  }
+  .rightsection {
+    width: 85%;
+    box-sizing: border-box;
+  }
 }

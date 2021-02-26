@@ -13,7 +13,16 @@
 }
 input {
   padding: 1em;
+  border: 1px solid gray;
 }
 label {
   margin-top: 1em;
+}
+/* mediaquery */
+@media only screen and (max-width: 550px) {
+  .formbox {
+    width: 85%;
+    width: 20em;
+    padding: 1em;
+  }
 }
